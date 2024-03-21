@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+i{
+    position: fixed;
+    bottom: 45px;
+    right: 91px;
+}
+
+.icon-bg{
+    background-color: #ff0000;
+    width: 80px;
+    height: 80px;
+
+    position: fixed;
+    right: 65px;
+
+    border-radius: 50px;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.icon-bg:hover{
+    animation-name: pulseAnimation, changeColor;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.icon-containerRow{
+    height: 500px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.icon-containerCol{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+}
+
+@keyframes pulseAnimation{
+    from{
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    to{
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes changeColor{
+    from{
+        background-color: red;
+    }
+    to{
+        background-color: #000fff;
+    }
+}
